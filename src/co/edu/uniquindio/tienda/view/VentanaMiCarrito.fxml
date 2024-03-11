@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.tienda.controllers.VentanaCarritoController">
+   <children>
+      <TableView fx:id="tablaProductosCarrito" layoutX="51.0" layoutY="108.0" prefHeight="277.0" prefWidth="670.0">
+        <columns>
+          <TableColumn fx:id="columnaCantidad" prefWidth="111.0" text="Cantidad" />
+          <TableColumn fx:id="columnaCodigo" prefWidth="121.0" text="Código" />
+            <TableColumn fx:id="columnaNombre" prefWidth="300.0" text="Nombre" />
+            <TableColumn fx:id="columnaPrecio" prefWidth="137.0" text="Precio" />
+        </columns>
+      </TableView>
+      <Text layoutX="51.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mi Carrito- productos">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="51.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elige un producto del carrito para gestionar" />
+      <Button layoutX="83.0" layoutY="433.0" mnemonicParsing="false" onAction="#eliminarProducto" prefHeight="31.0" prefWidth="153.0" text="Eliminar Producto" />
+      <Button layoutX="302.0" layoutY="433.0" mnemonicParsing="false" onAction="#irAPagar" prefHeight="31.0" prefWidth="147.0" text="Ir a Pagar" />
+      <Button layoutX="508.0" layoutY="433.0" mnemonicParsing="false" onAction="#salir" prefHeight="31.0" prefWidth="147.0" text="Volver" />
+   </children>
+</AnchorPane>

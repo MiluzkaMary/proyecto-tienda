@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.tienda.controllers.VentanaClienteController">
+   <children>
+      <Text fx:id="txtBienvenida" layoutX="118.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Bienvenido, name!">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnCatalogo" layoutX="131.0" layoutY="139.0" mnemonicParsing="false" onAction="#verCatalogo" prefHeight="31.0" prefWidth="126.0" text="Catálogo" />
+      <Button fx:id="btnCarrito" layoutX="131.0" layoutY="221.0" mnemonicParsing="false" onAction="#verCarrito" prefHeight="31.0" prefWidth="126.0" text="Mi carrito" />
+      <Button fx:id="btnCompras" layoutX="131.0" layoutY="304.0" mnemonicParsing="false" onAction="#verCompras" prefHeight="31.0" prefWidth="126.0" text="Mis compras" />
+      <Button fx:id="btnSalir" layoutX="131.0" layoutY="388.0" mnemonicParsing="false" onAction="#salir" prefHeight="31.0" prefWidth="126.0" text="Salir" />
+   </children>
+</AnchorPane>

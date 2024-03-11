@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.tienda.controllers.VentanaHistoricoVentasController">
+   <children>
+      <TableView fx:id="tablaHistorico" layoutX="38.0" layoutY="64.0" prefHeight="405.0" prefWidth="615.0">
+        <columns>
+          <TableColumn fx:id="columnaCodigo" prefWidth="122.0" text="Codigo" />
+          <TableColumn fx:id="columnaFecha" prefWidth="125.0" text="Fecha" />
+            <TableColumn fx:id="columnaCliente" prefWidth="226.0" text="Cliente" />
+            <TableColumn fx:id="columnaTotal" prefWidth="141.0" text="Total" />
+        </columns>
+      </TableView>
+      <Text layoutX="38.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Historico De Ventas">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Button layoutX="318.0" layoutY="509.0" mnemonicParsing="false" onAction="#salir" text="Volver" />
+   </children>
+</AnchorPane>

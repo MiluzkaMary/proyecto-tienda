@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.tienda.controllers.VentanaInicioController">
+   <children>
+      <Text layoutX="418.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="comboCargo" layoutX="342.0" layoutY="121.0" prefHeight="31.0" prefWidth="204.0" />
+      <Text layoutX="341.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo:" />
+      <TextField fx:id="txtID" layoutX="342.0" layoutY="195.0" prefHeight="31.0" prefWidth="204.0" />
+      <Text layoutX="338.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identificación:" />
+      <Button fx:id="btnIngresar" layoutX="364.0" layoutY="270.0" mnemonicParsing="false" onAction="#ingresar" prefHeight="31.0" prefWidth="156.0" text="Ingresar" />
+      <ImageView fx:id="imagenLogo" fitHeight="400.0" fitWidth="300.0">
+         <image>
+            <Image url="@../../../../../imagenes/logo.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnIngresar1" layoutX="366.0" layoutY="316.0" mnemonicParsing="false" onAction="#ventanaRegistrarse" prefHeight="31.0" prefWidth="156.0" text="Registrarme" />
+   </children>
+</AnchorPane>
