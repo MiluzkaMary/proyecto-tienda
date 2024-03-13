@@ -12,6 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class VentanaHistoricoVentasController {
@@ -38,7 +39,7 @@ public class VentanaHistoricoVentasController {
     @FXML
     private TableColumn<Venta, String> columnaTotal;
 
-    
+    @FXML
     void salir() {
     	ventana.close();
     }
@@ -48,6 +49,25 @@ public class VentanaHistoricoVentasController {
     }
     
     public void actualizarTabla() {
+    	
+		tablaHistorico.getItems().clear();
+		    	
+		LinkedList<Venta> ventas = mfm.getTienda().getHistoricoVentas();
+		
+		// Convertir la lista de ventas en una ObservableList
+		ObservableList<Venta> ventasObservable = FXCollections.observableArrayList(ventas);
+		
+		// Configurar las columnas de la tabla
+		columnaCodigo.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCodigo()));
+		columnaCliente.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCliente().getNombre()));
+		columnaFecha.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getFechaCadena()));
+		columnaTotal.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getTotalCadena()));
+		
+		// Asignar los datos a la tabla
+		tablaHistorico.setItems(ventasObservable);
+    	
+    	/**
+    	 * //mfm.tienda.imprimirCodigosVentas();
         // Limpiar la tabla
     	tablaHistorico.getItems().clear();
         
@@ -56,6 +76,7 @@ public class VentanaHistoricoVentasController {
         
         // Convertir la lista de ventas en una ObservableList
         ObservableList<Venta> ventasObservable = FXCollections.observableArrayList(ventas);
+        tablaHistorico.setItems(ventasObservable);
         
         // Asignar los valores de las propiedades a las columnas
         columnaCodigo.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCodigo()));
@@ -65,7 +86,8 @@ public class VentanaHistoricoVentasController {
         
 
         // Agregar las listas de ventas a la tabla
-        tablaHistorico.getItems().addAll(ventasObservable);
+        //tablaHistorico.getItems().addAll(ventasObservable);
+    	 */
     }
 
     

@@ -46,7 +46,7 @@ public class ModelFactoryController {
 		
 		try {
 			tienda.registrarCliente("12345", "Mary", "Armenia");
-			tienda.registrarAdmin("Miluzka", "476299", "Armenia");
+			tienda.registrarAdmin("476299", "Miluzka", "Armenia");
 			datosQuemados();
 			
 		} catch(Exception e) {}

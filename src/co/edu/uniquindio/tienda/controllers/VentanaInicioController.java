@@ -71,7 +71,7 @@ public class VentanaInicioController {
         	
         	switch (cargoSeleccionado) {
             case "Administrador":
-                
+                System.out.print(documento);
             	aplicacion.iniciarVentanaAdministrador(documento);
             	
                 break;

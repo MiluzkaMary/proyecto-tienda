@@ -68,9 +68,10 @@ public class Aplicacion extends Application {
 			Scene scene = new Scene(page);
 			ventana.setScene(scene);
 			VentanaAdministradorController controller = loader.getController();
+			controller.setDocumento(documento);
 			controller.setAplicacionPrincipal(this);
 			controller.setVentana(ventana);
-			controller.setDocumento(documento);
+			
 			ventana.showAndWait();
 			
 		} catch (IOException e) {

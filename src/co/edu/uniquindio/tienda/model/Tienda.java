@@ -43,6 +43,14 @@ public class Tienda implements Serializable{
         inventarioProductos = new TreeSet<>();
     }
     
+    public void imprimirCodigosVentas() {
+        System.out.println("Códigos de las ventas:");
+        
+        for (Venta venta : historicoVentas) {
+            System.out.println(venta.getCodigo());
+        }
+    }
+    
     //getters and setters
 
 	/**
@@ -166,10 +174,24 @@ public class Tienda implements Serializable{
 	    return null;
 	}
 	
+	public void imprimirDocumentosAdministradores() {
+	    System.out.println("Documentos de los administradores:");
+
+	    for (String documento : administradores.keySet()) {
+	        System.out.println(documento);
+	    }
+	}
+
+	
 	public Administrador buscarAdminPorDocumento(String documento) {
+		System.out.print("docs");
+		imprimirDocumentosAdministradores();
 		if (administradores.containsKey(documento)) {
 	        // Devolver el administrador si se encuentra
 	        return administradores.get(documento);
+	    }else {
+			System.out.print("no entro a la condicion ya que no se encontro clave matcheada en admins");
+
 	    }
 	    // Devolver null si no se encuentra ningún administrador con el documento proporcionado
 	    return null;
@@ -263,7 +285,7 @@ public class Tienda implements Serializable{
 		if (!administradores.containsKey(documento)) {
 	        Administrador adminNuevo = new Administrador(nombre, documento, direccion);
 	        administradores.put(documento, adminNuevo);
-	        System.out.println("Admin registrado con éxito.");
+	        System.out.println("Admin "+documento+"registrado con éxito.");
 	    } else {
 	        System.out.println("El Admin con documento " + documento + " ya está registrado.");
 	    }

@@ -70,9 +70,10 @@ public class VentanaAdministradorController {
 
 	
 	public void setDocumento(String documento) {
+		System.out.print("dentro de ventana admin "+documento);
 		this.documento=documento;
 		this.admin=mfm.buscarAdmin(documento);
-		//txtBienvenida.setText("¡Bienvenid@, "+ admin.getNombre() + "!" );
+		txtBienvenida.setText("¡Bienvenid@, "+ admin.getNombre() + "!" );
 	}
 	
 
